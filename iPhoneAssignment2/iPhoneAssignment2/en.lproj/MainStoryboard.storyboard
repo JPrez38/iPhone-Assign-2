@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Color Change View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ColorChangeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GNi-bA-tBi">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQm-6t-OPQ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2e-Lr-30f">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4v-Xa-FoB">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Count" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wth-Vb-DL4">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dyO-0x-Pc6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6dt-jn-1PE"/>
+                                    <constraint firstAttribute="width" constant="184" id="ZYz-J7-lz4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sRe-ZV-QLx">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDp-Je-U3T">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="ffq-u6-K68"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zrr-FZ-2OO">
+                                <items>
+                                    <navigationItem title="Website Password Key" id="xuA-IE-nAY"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYN-6o-wZR">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Backward">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDo-ZK-qHz">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Forward">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiE-Kt-8z7">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Increment Count">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="img_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="4KY-4X-sfP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="J7y-zR-FvQ"/>
+                                    <constraint firstAttribute="width" constant="240" id="Yhu-51-f9H"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GNi-bA-tBi" secondAttribute="bottom" constant="199" id="3Pg-9A-tgq"/>
+                            <constraint firstItem="dyO-0x-Pc6" firstAttribute="leading" secondItem="GNi-bA-tBi" secondAttribute="leading" type="default" id="7VK-jD-d84"/>
+                            <constraint firstItem="T2e-Lr-30f" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="E3r-0L-b95"/>
+                            <constraint firstItem="MiE-Kt-8z7" firstAttribute="centerX" secondItem="Zrr-FZ-2OO" secondAttribute="centerX" type="default" id="GWp-2f-hem"/>
+                            <constraint firstAttribute="bottom" secondItem="wth-Vb-DL4" secondAttribute="bottom" constant="137" id="KZw-CM-oio"/>
+                            <constraint firstItem="NQm-6t-OPQ" firstAttribute="baseline" secondItem="dyO-0x-Pc6" secondAttribute="baseline" type="default" id="Ljc-ii-GTH"/>
+                            <constraint firstAttribute="bottom" secondItem="w4v-Xa-FoB" secondAttribute="bottom" constant="171" id="NTj-C7-VF3"/>
+                            <constraint firstItem="dyO-0x-Pc6" firstAttribute="top" secondItem="3" secondAttribute="top" constant="197" id="OIl-OX-h0n"/>
+                            <constraint firstItem="Zrr-FZ-2OO" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="OZJ-SK-1FI"/>
+                            <constraint firstAttribute="trailing" secondItem="DDo-ZK-qHz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QVN-7a-gzc"/>
+                            <constraint firstItem="4KY-4X-sfP" firstAttribute="centerX" secondItem="HDp-Je-U3T" secondAttribute="centerX" type="default" id="Qd5-2u-QR9"/>
+                            <constraint firstItem="wth-Vb-DL4" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RDM-7l-7cS"/>
+                            <constraint firstItem="CYN-6o-wZR" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="TjE-yP-wGr"/>
+                            <constraint firstAttribute="bottom" secondItem="MiE-Kt-8z7" secondAttribute="bottom" constant="27" id="UtB-mc-nsB"/>
+                            <constraint firstAttribute="trailing" secondItem="sRe-ZV-QLx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="deX-fp-zPC"/>
+                            <constraint firstAttribute="bottom" secondItem="CYN-6o-wZR" secondAttribute="bottom" constant="83" id="ewS-8r-V4B"/>
+                            <constraint firstItem="Zrr-FZ-2OO" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="fIz-OB-omN"/>
+                            <constraint firstItem="NQm-6t-OPQ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fd9-qq-tti"/>
+                            <constraint firstItem="HDp-Je-U3T" firstAttribute="leading" secondItem="sRe-ZV-QLx" secondAttribute="leading" type="default" id="fjy-J3-lSY"/>
+                            <constraint firstAttribute="bottom" secondItem="T2e-Lr-30f" secondAttribute="bottom" constant="204" id="kMj-o4-dfL"/>
+                            <constraint firstItem="GNi-bA-tBi" firstAttribute="leading" secondItem="sRe-ZV-QLx" secondAttribute="leading" type="default" id="mUo-00-63R"/>
+                            <constraint firstAttribute="bottom" secondItem="sRe-ZV-QLx" secondAttribute="bottom" constant="166" id="mlR-78-0Oe"/>
+                            <constraint firstItem="NQm-6t-OPQ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="201" id="oq9-Oc-Ttj"/>
+                            <constraint firstItem="Zrr-FZ-2OO" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="tgA-JX-45w"/>
+                            <constraint firstItem="4KY-4X-sfP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="52" id="uPJ-FC-eVL"/>
+                            <constraint firstItem="T2e-Lr-30f" firstAttribute="baseline" secondItem="GNi-bA-tBi" secondAttribute="baseline" type="default" id="utz-Ni-LO5"/>
+                            <constraint firstAttribute="trailing" secondItem="dyO-0x-Pc6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vJb-wp-FFm"/>
+                            <constraint firstAttribute="bottom" secondItem="HDp-Je-U3T" secondAttribute="bottom" constant="132" id="vkH-gD-1ha"/>
+                            <constraint firstItem="w4v-Xa-FoB" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wuA-PU-jMJ"/>
+                            <constraint firstAttribute="trailing" secondItem="GNi-bA-tBi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="x6b-f9-Nkn"/>
+                            <constraint firstItem="DDo-ZK-qHz" firstAttribute="baseline" secondItem="CYN-6o-wZR" secondAttribute="baseline" type="default" id="yb1-3W-82i"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_2.png" width="114" height="114"/>
+    </resources>
+    <classes>
+        <class className="ColorChangeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ColorChangeViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
