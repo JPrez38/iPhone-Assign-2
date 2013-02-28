@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SiteViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *textField;
-- (IBAction)textEntered:(UITextField *)sender;
-- (IBAction)buttonPushed:(UIButton *)sender;
+
 
 @end

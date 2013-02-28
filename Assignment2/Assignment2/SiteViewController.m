@@ -25,10 +25,23 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+/*
 - (IBAction)textEntered:(UITextField *)sender {
 }
 
 - (IBAction)buttonPushed:(UIButton *)sender {
+    NSString *title = [sender titleForState:UIControlStateNormal];
+    NSString *plainText = [NSString stringWithFormat:@"%@",title];
+    
+    NSMutableAttributedString *styledText = [[NSMutableAttributedString alloc]
+                                             initWithString:plainText];
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:_textField.font.pointSize]
+                                 };
+    NSRange nameRange = [plainText rangeOfString:title];
+    
+    [styledText setAttributes:attributes range:nameRange];
+    _textField.attributedText = styledText;
 }
+ */
 @end
