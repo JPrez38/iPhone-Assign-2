@@ -14,7 +14,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UITextField *count;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
 @property NSMutableArray *login;
+@property int current;
+@property int maxLength;
 - (IBAction)textEntered:(UITextField *)sender;
 - (IBAction)buttonPushed:(UIButton *)sender;
 - (IBAction)backgroundTap:(id)sender;
@@ -24,6 +27,7 @@
 - (IBAction)add:(UIButton *)sender;
 - (IBAction)backward:(UIButton *)sender;
 - (IBAction)scroll:(UISlider *)sender;
+
 
 
 @end

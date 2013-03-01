@@ -39,7 +39,27 @@
     [_login addObject:amazon];
     [_login addObject:yahoo];
     [_login addObject:tumblr];
+    _current = 0;
+    _userName.text= [[_login objectAtIndex:_current]  getUsername];
+    _password.text= [[_login objectAtIndex:_current]  getPassword];
+    _webSite.text= [[_login objectAtIndex:_current]  getWebsite];
+    _count.text= [[_login objectAtIndex:_current] getCount];
+    _maxLength=[_login count];
+    _slider.maximumValue=_maxLength-1;
+    
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
++(NSMutableArray*) myArray
+{
+    static NSMutableArray* theValue = nil;
+    {
+        if (theValue == nil)
+        {
+            theValue = [[NSMutableArray alloc] init];
+        }
+    }
+    return theValue;
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,25 +67,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-/*
-- (IBAction)textEntered:(UITextField *)sender {
-}
 
-- (IBAction)buttonPushed:(UIButton *)sender {
-    NSString *title = [sender titleForState:UIControlStateNormal];
-    NSString *plainText = [NSString stringWithFormat:@"%@",title];
-    
-    NSMutableAttributedString *styledText = [[NSMutableAttributedString alloc]
-                                             initWithString:plainText];
-    
-    NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:_textField.font.pointSize]
-                                 };
-    NSRange nameRange = [plainText rangeOfString:title];
-    
-    [styledText setAttributes:attributes range:nameRange];
-    _textField.attributedText = styledText;
-}
- */
 - (IBAction)textEntered:(UITextField *)sender {
 }
 
@@ -77,31 +79,49 @@
 }
 
 - (IBAction)incrementCount:(UIButton *)sender {
-    int count = [_count.text intValue];
-    count=count+1;
-    _count.text=[NSString stringWithFormat:@"%d",count];
+    [[_login objectAtIndex:_current] incrementCount];
+    _count.text= [[_login objectAtIndex:_current] getCount];
 }
 
 - (IBAction)forward:(UIButton *)sender {
-    _userName.text= [[_login objectAtIndex:1]  getUsername];
-    _password.text= [[_login objectAtIndex:1]  getPassword];
-    _webSite.text= [[_login objectAtIndex:1]  getWebsite];
-    _count.text= [[_login objectAtIndex:1] getCount];
+    _current=_current+1;
+    if (_current >= _maxLength){
+        _current=0;
+    }
+    _userName.text= [[_login objectAtIndex:_current]  getUsername];
+    _password.text= [[_login objectAtIndex:_current]  getPassword];
+    _webSite.text= [[_login objectAtIndex:_current]  getWebsite];
+    _count.text= [[_login objectAtIndex:_current] getCount];
+   
 }
 
 - (IBAction)add:(UIButton *)sender {
-
-    _password.text= [[_login objectAtIndex:1] getUsername];
+    _maxLength=_maxLength+1;
+    _slider.maximumValue=_maxLength-1;
+    SiteValue *newsite = [SiteValue siteValueWithUsername:_userName.text andPassword:_password.text andWebsite:_webSite.text];
+    [_login addObject:newsite];
+    
 }
 
 - (IBAction)backward:(UIButton *)sender {
-    _userName.text= [[_login objectAtIndex:0] getUsername];
-    _password.text= [[_login objectAtIndex:0] getPassword];
-    _webSite.text= [[_login objectAtIndex:0] getWebsite];
-    _count.text= [[_login objectAtIndex:0] getCount];
+    _current=_current-1;
+    if (_current < 0){
+        _current=_maxLength-1;
+    }
+    _userName.text= [[_login objectAtIndex:_current]  getUsername];
+    _password.text= [[_login objectAtIndex:_current]  getPassword];
+    _webSite.text= [[_login objectAtIndex:_current]  getWebsite];
+    _count.text= [[_login objectAtIndex:_current] getCount];
+
 }
 
 - (IBAction)scroll:(UISlider *)sender {
+    int progress = round(sender.value);
+    _userName.text= [[_login objectAtIndex:progress]  getUsername];
+    _password.text= [[_login objectAtIndex:progress]  getPassword];
+    _webSite.text= [[_login objectAtIndex:progress]  getWebsite];
+    _count.text= [[_login objectAtIndex:progress] getCount];
+    
 }
 - (IBAction)backgroundTap:(id)sender {
     [self.webSite resignFirstResponder];
