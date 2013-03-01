@@ -11,13 +11,17 @@
 
 @interface SiteValue : NSObject
 
-@property id username, password;
+@property id username, password, website;
 @property int count;
 
 
 - (void) printSiteValue;
 - (void) setCount;
 - (void) incrementCount;
+- (id) getUsername;
+- (id) getPassword;
+- (id) getWebsite;
+- (id) getCount;
 
 - (SiteValue*) initWithUsername: (NSString*) username
    andPassword: (NSString*) password;

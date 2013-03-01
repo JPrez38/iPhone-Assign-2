@@ -22,6 +22,22 @@
     _count++;
 }
 
+- (id) getUsername {
+    return _username;
+}
+
+- (id) getPassword {
+    return _password;
+}
+
+- (id) getWebsite {
+    return _website;
+}
+
+- (id) getCount {
+    return [NSString stringWithFormat:@"%d",_count];
+}
+
 
 - (SiteValue*) initWithUsername: (NSString*) username
                     andPassword: (NSString*) password {

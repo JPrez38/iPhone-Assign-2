@@ -7,8 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SiteValue.h"
 
 @interface SiteViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *webSite;
+@property (weak, nonatomic) IBOutlet UITextField *userName;
+@property (weak, nonatomic) IBOutlet UITextField *password;
+@property (weak, nonatomic) IBOutlet UITextField *count;
+@property NSMutableDictionary *login;
+- (IBAction)textEntered:(UITextField *)sender;
+- (IBAction)buttonPushed:(UIButton *)sender;
+- (IBAction)backgroundTap:(id)sender;
+- (IBAction)textFieldDoneEditing:(id)sender;
+- (IBAction)incrementCount:(UIButton *)sender;
+- (IBAction)forward:(UIButton *)sender;
+- (IBAction)add:(UIButton *)sender;
+- (IBAction)backward:(UIButton *)sender;
+- (IBAction)scroll:(UISlider *)sender;
 
 
 @end
