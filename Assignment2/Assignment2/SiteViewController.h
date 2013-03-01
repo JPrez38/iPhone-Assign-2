@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UITextField *count;
-@property NSMutableDictionary *login;
+@property NSMutableArray *login;
 - (IBAction)textEntered:(UITextField *)sender;
 - (IBAction)buttonPushed:(UIButton *)sender;
 - (IBAction)backgroundTap:(id)sender;

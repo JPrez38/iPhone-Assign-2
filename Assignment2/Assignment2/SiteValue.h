@@ -24,10 +24,12 @@
 - (id) getCount;
 
 - (SiteValue*) initWithUsername: (NSString*) username
-   andPassword: (NSString*) password;
+   andPassword: (NSString*) password
+                     andWebsite: (NSString*) website;
 
 +(SiteValue*) siteValueWithUsername: (NSString*) username
-                        andPassword: (NSString*) password;
+                        andPassword: (NSString*) password
+                         andWebsite: (NSString*) website;
 
 
 

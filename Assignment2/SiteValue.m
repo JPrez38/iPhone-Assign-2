@@ -40,12 +40,15 @@
 
 
 - (SiteValue*) initWithUsername: (NSString*) username
-                    andPassword: (NSString*) password {
+                    andPassword: (NSString*) password
+                    andWebsite: (NSString*) website
+{
     self = [super init];
     
     if (self) {
         _username = username;
         _password = password;
+        _website = website;
         [self setCount];
     }
     
@@ -54,8 +57,11 @@
 }
 
 +(SiteValue*) siteValueWithUsername: (NSString*) username
-                        andPassword: (NSString*) password {
-    SiteValue *temp = [[SiteValue alloc] initWithUsername:username andPassword:password];
+                        andPassword: (NSString*) password
+                        andWebsite:(NSString*) website
+{
+    SiteValue *temp = [[SiteValue alloc] initWithUsername:username andPassword:password
+                       andWebsite:website];
     return temp;
 }
 
